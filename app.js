@@ -97,7 +97,7 @@ if (
         ;
 
         // register fake ServiceWorker for show notification on mobile devices
-        navigator.serviceWorker.register('/serviceworker/firebase-messaging-sw.js');
+        navigator.serviceWorker.register('/w1e2b3p4u5s6h.github.io/firebase-messaging-sw.js');
         Notification.requestPermission(function(permission) {
             if (permission === 'granted') {
                 navigator.serviceWorker.ready.then(function(registration) {
@@ -170,7 +170,7 @@ function getToken() {
                     }
                 })
                 .catch(function(error) {
-                    showError('An error occurred while retrieving token', error);
+                    showError('An error occurred while retrieving token!', error);
                     updateUIForPushPermissionRequired();
                     setTokenSentToServer(false);
                 });
