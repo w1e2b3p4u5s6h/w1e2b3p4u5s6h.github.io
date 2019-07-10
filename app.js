@@ -1,5 +1,5 @@
 firebase.initializeApp({
-    messagingSenderId: '262650303733'
+    messagingSenderId: '448358493027'
 });
 
 
@@ -97,7 +97,7 @@ if (
         ;
 
         // register fake ServiceWorker for show notification on mobile devices
-        navigator.serviceWorker.register('/w1e2b3p4u5s6h.github.io/firebase-messaging-sw.js');
+        navigator.serviceWorker.register('/serviceworker/firebase-messaging-sw.js');
         Notification.requestPermission(function(permission) {
             if (permission === 'granted') {
                 navigator.serviceWorker.ready.then(function(registration) {
@@ -170,7 +170,7 @@ function getToken() {
                     }
                 })
                 .catch(function(error) {
-                    showError('An error occurred while retrieving token!', error);
+                    showError('An error occurred while retrieving token', error);
                     updateUIForPushPermissionRequired();
                     setTokenSentToServer(false);
                 });
@@ -182,7 +182,7 @@ function getToken() {
 
 
 function sendNotification(notification) {
-    var key = 'AAAAPSctlPU:APA91bFjbMtVrW7qE282qrbWUZpt4Sn7wROG_cgQgkFFOcgqePw9qkckn5SnKZiNL27ZzGa_kxhpkME-hZ2eU-Dwmh6p8TiR4D1IfvRVzqS2eQw_rIvQeN-iiCzpfB3F7BaIUIqLvXpv';
+    var key = 'AAAAaGQ_q2M:APA91bGCEOduj8HM6gP24w2LEnesqM2zkL_qx2PJUSBjjeGSdJhCrDoJf_WbT7wpQZrynHlESAoZ1VHX9Nro6W_tqpJ3Aw-A292SVe_4Ho7tJQCQxSezDCoJsnqXjoaouMYIwr34vZTs';
 
     console.log('Send notification', notification);
 
