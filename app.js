@@ -1,5 +1,5 @@
 firebase.initializeApp({
-    messagingSenderId: '262650303733'
+    messagingSenderId: '448358493027'
 });
 
 
@@ -101,10 +101,10 @@ if (
         Notification.requestPermission(function(permission) {
             if (permission === 'granted') {
                 navigator.serviceWorker.ready.then(function(registration) {
-                    // Copy data object to get parameters in the click handler
-                    payload.data.data = JSON.parse(JSON.stringify(payload.data));
+                  // Copy data object to get parameters in the click handler
+                  payload.data.data = JSON.parse(JSON.stringify(payload.data));
 
-                    registration.showNotification(payload.data.title, payload.data);
+                  registration.showNotification(payload.data.title, payload.data);
                 }).catch(function(error) {
                     // registration failed :(
                     showError('ServiceWorker registration failed', error);
